@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #263b37;
+  background: #f2f6f2;
+  line-height: 1.6;
+}
+
+header {
+  padding: 2rem 1rem;
+  color: #fff;
+  background: #174a45;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.25rem 0 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+nav a {
+  padding: 0.4rem 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #174a45;
+  background: #d7eee2;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main > h2 {
+  margin-top: 0;
+}
+
+section {
+  margin: 1.25rem 0;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border: 1px solid #d9e4dc;
+  border-radius: 6px;
+}
+
+section h3 {
+  margin-top: 0;
+  color: #174a45;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  padding: 1rem;
+  background: #edf4ef;
+  border-left: 4px solid #cf6b43;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.7rem;
+  border: 1px solid #cbd8d0;
+  text-align: left;
+}
+
+th {
+  background: #edf4ef;
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0 0 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.65rem;
+  color: inherit;
+  font: inherit;
+  border: 1px solid #aebeb4;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #4b8878;
+  outline-offset: 1px;
+}
+
+button {
+  padding: 0.65rem 1rem;
+  color: #fff;
+  font: inherit;
+  background: #174a45;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+button:hover,
+button:focus-visible {
+  background: #cf5f37;
+  transform: translateY(-2px);
+}
+
+footer {
+  padding: 1rem;
+  color: #fff;
+  background: #263b37;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1.25rem 0.75rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    margin: 1.25rem auto;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}
