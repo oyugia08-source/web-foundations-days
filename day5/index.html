@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f6f2">
+  <title>User Directory</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="users.js" defer></script>
+</head>
+<body>
+  <main class="directory">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">PEOPLE / DIRECTORY</p>
+        <h1>User Directory</h1>
+      </div>
+      <button id="load-users" type="button">Load users</button>
+    </header>
+
+    <section aria-label="User list">
+      <div class="directory-tools">
+        <label for="filter-input">Filter by name</label>
+        <input id="filter-input" type="search" placeholder="Type a name">
+      </div>
+      <p id="status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <ul id="users-list" aria-label="Users"></ul>
+    </section>
+  </main>
+</body>
+</html>
