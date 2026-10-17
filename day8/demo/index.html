@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf3f0">
+  <title>TicketHub | Live event tickets</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="/" aria-label="TicketHub home"><span class="brand-mark">T</span>TicketHub</a>
+    <div class="sale-indicator"><span class="live-dot"></span> Live seat inventory</div>
+    <a class="tickets-link" href="#my-tickets">My tickets <span aria-hidden="true">↘</span></a>
+  </header>
+
+  <main class="page-shell">
+    <section class="event-heading" aria-labelledby="event-title">
+      <p class="eyebrow">ON SALE NOW <span>·</span> HARBOR HALL</p>
+      <div class="heading-row">
+        <div>
+          <h1 id="event-title">Evening Jazz Live</h1>
+          <p class="event-subtitle">The Harbor Quartet, up close.</p>
+        </div>
+        <div class="event-date"><span>FRI</span><strong>20</strong><span>NOV · 8 PM</span></div>
+      </div>
+    </section>
+
+    <section class="booking-layout" aria-label="Choose event tickets">
+      <div class="seat-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">SELECT YOUR SEATS</p>
+            <h2>Harbor Hall</h2>
+          </div>
+          <span class="inventory-note">Inventory refreshes automatically</span>
+        </div>
+
+        <div class="stage" aria-label="Stage">STAGE</div>
+        <div class="seat-map" id="seat-map" aria-label="Interactive seat map"></div>
+        <div class="legend" aria-label="Seat key">
+          <span><i class="legend-seat available"></i> Available</span>
+          <span><i class="legend-seat selected"></i> Selected</span>
+          <span><i class="legend-seat unavailable"></i> Held or sold</span>
+        </div>
+        <p class="demo-hint">For the conflict demo, open this page in a second tab, choose the same seat, and try to hold it.</p>
+      </div>
+
+      <aside class="order-panel" aria-labelledby="order-heading">
+        <p class="eyebrow">YOUR ORDER</p>
+        <h2 id="order-heading">Make it a night</h2>
+        <label for="buyer-id">Demo buyer</label>
+        <select id="buyer-id">
+          <option value="buyer-a">Buyer A</option>
+          <option value="buyer-b">Buyer B</option>
+        </select>
+        <div class="selection-summary" id="selection-summary">Choose up to 4 seats</div>
+        <div class="price-row"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+        <div class="price-row service-row"><span>Service fee <span class="fee-note">($5 per ticket)</span></span><strong id="service-fee">$0.00</strong></div>
+        <div class="price-row total-row"><span>Total</span><strong id="total">$0.00</strong></div>
+        <button id="hold-btn" class="primary-button" type="button" disabled>Hold selected seats</button>
+        <p class="hold-note">A hold lasts 2 minutes. Payment is simulated; no real charge is made.</p>
+
+        <div id="hold-details" class="hold-details" hidden>
+          <p class="hold-clock">Held for <strong id="countdown">2:00</strong></p>
+          <button id="pay-btn" class="primary-button" type="button">Complete demo checkout</button>
+          <button id="decline-btn" class="quiet-button" type="button">Simulate declined payment</button>
+          <button id="release-btn" class="text-button" type="button">Release seats</button>
+        </div>
+        <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+      </aside>
+    </section>
+
+    <section id="my-tickets" class="tickets-section" aria-labelledby="tickets-heading">
+      <div class="tickets-heading">
+        <div>
+          <p class="eyebrow">SAVED TO THIS BUYER</p>
+          <h2 id="tickets-heading">Your tickets</h2>
+        </div>
+        <button id="refresh-tickets" class="quiet-button" type="button">Refresh tickets</button>
+      </div>
+      <div id="ticket-list" class="ticket-list"><p class="empty-state">Complete checkout to see tickets here.</p></div>
+    </section>
+
+    <footer class="demo-footer">TicketHub prototype · Sample event and simulated checkout · No payment is collected</footer>
+  </main>
+</body>
+</html>
